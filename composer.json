@@ -1,0 +1,45 @@
+{
+    "name": "sepiphy/laravel-repositories",
+    "description": "The \"sepiphy/laravel-repositories\" package extends Laravel Repositories Component.",
+    "keywords": [
+        "sepiphy", "laravel", "laravel-repositories"
+    ],
+    "type": "library",
+    "homepage": "https://github.com/sepiphy/laravel-extensions",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/sepiphy/laravel-extensions/issues",
+        "source": "https://github.com/sepiphy/laravel-extensions"
+    },
+    "authors": [
+        {
+            "name": "Nguyễn Xuân Quỳnh",
+            "email": "nguyenxuanquynh2210vghy@gmail.com",
+            "homepage": "https://nguyenquynh2210.com",
+            "role": "Software Developer"
+        }
+    ],
+    "require": {
+        "illuminate/support": "~5.5",
+        "illuminate/database": "~5.5",
+        "sepiphy/laravel-support": "^0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sepiphy\\Laravel\\Repositories\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.3-dev"
+        }
+    },
+    "suggest": {
+        "sepiphy/laravel-contracts": "Required to use base repository interface (^0.1)."
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
