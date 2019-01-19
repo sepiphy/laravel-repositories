@@ -35,7 +35,7 @@
         }
     },
     "suggest": {
-        "sepiphy/laravel-contracts": "Required to use base repository interface (^0.1)."
+        "sepiphy/laravel-contracts": "Required to use base repository interface (^0.3)."
     },
     "config": {
         "sort-packages": true
