@@ -1,13 +1,13 @@
 
-# Laravel Repositories Extension
+# The Sepiphy Laravel Repositories package
 
 ## Requirements
 
-- Laravel [5.6](https://laravel.com/docs/5.6) or [5.7](https://laravel.com/docs/5.7).
+- Laravel [5.6](https://laravel.com/docs/5.5), [5.6](https://laravel.com/docs/5.6) or [5.7](https://laravel.com/docs/5.7).
 
 ## Installation
 
-You should install the `sepiphy/laravel-repositories` dependency via Composer:
+Install the `sepiphy/laravel-repositories` package via Composer:
 
 ```bash
 composer require sepiphy/laravel-repositories
@@ -32,7 +32,7 @@ return [
 
 ## Usage
 
-Creating a specified repository interface.
+Create a specified repository interface.
 
 ```php
 namespace App\Contracts\Repositories;
@@ -45,12 +45,12 @@ interface UserRepository extends Repository
 }
 ```
 
-Creating a specified repository class.
+Create a specified repository class.
 
 ```php
 namespace App\Repositories;
 
-use App\Eloquent\User; // User extends Model
+use App\Eloquent\User;
 use Sepiphy\Laravel\Repositories\Repository as BaseRepository;
 use App\Contracts\Repositories\UserRepository as UserRepositoryContract;
 
@@ -68,7 +68,7 @@ class UserRepository extends BaseRepository implements UserRepositoryContract
 }
 ```
 
-Registering container bindings (typically in service providers).
+Register container bindings (typically in service providers).
 
 ```php
 $this->app->singleton(
@@ -77,7 +77,7 @@ $this->app->singleton(
 );
 ```
 
-For example, Using a repository inside a controller.
+For example, use a repository inside a controller.
 
 ```php
 namespace App\Http\Controllers;
@@ -104,7 +104,7 @@ class UserController extends Controller
 }
 ```
 
-These are available methods:
+These are available methods now.
 
 ```php
 $repository->store($attributes);
@@ -115,3 +115,11 @@ $repository->findOrFail($id, $columns = ['*']);
 $repository->get($columns = ['*']);
 $repository->paginate($perPage = null, $columns = ['*'], $pageName = 'page', $page = null);
 ```
+
+## Contributing
+
+Please visit [sepiphy/laravel-extensions](../../README.md) for more details!
+
+## License
+
+The `sepiphy/laravel-repositories` package is open-sourced software licensed under the [MIT license](LICENSE.md).
