@@ -109,10 +109,13 @@ These are available methods now.
 ```php
 $repository->store($attributes);
 $repository->update($model, $attributes);
-$repository->destroy($model);
+$repository->delete($model);
+$repository->destroy($ids);
+$repository->all($columns = ['*']);
+$repository->first($columns = ['*']);
+$repository->firstOrFail($columns = ['*']);
 $repository->find($id, $columns = ['*']);
 $repository->findOrFail($id, $columns = ['*']);
-$repository->get($columns = ['*']);
 $repository->paginate($perPage = null, $columns = ['*'], $pageName = 'page', $page = null);
 ```
 

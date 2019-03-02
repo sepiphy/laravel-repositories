@@ -12,6 +12,7 @@
 namespace Sepiphy\Laravel\Repositories;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
 use Sepiphy\Laravel\Support\Interaction\InteractsWithApplication;
 
 abstract class Repository
@@ -37,7 +38,7 @@ abstract class Repository
      */
     public function store($attributes)
     {
-        return $this->model()->create((array) $attributes);
+        return $this->model->create((array) $attributes);
     }
 
     /**
@@ -53,7 +54,7 @@ abstract class Repository
     /**
      * {@inheritdoc}
      */
-    public function destroy($model)
+    public function delete($model)
     {
         return $model->delete();
     }
@@ -61,9 +62,41 @@ abstract class Repository
     /**
      * {@inheritdoc}
      */
+    public function destroy($ids)
+    {
+        return $this->model->destroy($ids);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function all($columns = ['*'])
+    {
+        return $this->newQuery()->all($columns);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function first($columns = ['*'])
+    {
+        return $this->newQuery()->first($columns);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function firstOrFail($columns)
+    {
+        return $this->newQuery()->firstOrFail($columns);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function find($id, $columns = ['*'])
     {
-        return $this->model()->find($id, $columns);
+        return $this->newQuery()->find($id, $columns);
     }
 
     /**
@@ -71,15 +104,7 @@ abstract class Repository
      */
     public function findOrFail($id, $columns = ['*'])
     {
-        return $this->model()->findOrFail($id, $columns);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function get($columns = ['*'])
-    {
-        return $this->model()->get($columns);
+        return $this->newQuery()->findOrFail($id, $columns);
     }
 
     /**
@@ -87,21 +112,17 @@ abstract class Repository
      */
     public function paginate($perPage = null, $columns = ['*'], $pageName = 'page', $page = null)
     {
-        return $this->model()->paginate($perPage, $columns, $pageName, $page);
+        return $this->newQuery()->paginate($perPage, $columns, $pageName, $page);
     }
 
     /**
-     * Get the model instance.
+     * Get the new query builder.
      *
-     * @return Model
+     * @return Builder
      */
-    public function model()
+    protected function newQuery()
     {
-        if (is_null($this->model)) {
-            $this->model = $this->app->make($this->getModelName());
-        }
-
-        return $this->model;
+        return $this->model->query();
     }
 
     /**
