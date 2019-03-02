@@ -20,8 +20,8 @@
         }
     ],
     "require": {
-        "illuminate/support": "5.8",
-        "illuminate/database": "5.8",
+        "illuminate/support": "5.8.*",
+        "illuminate/database": "5.8.*",
         "sepiphy/laravel-support": "^0.3"
     },
     "autoload": {
