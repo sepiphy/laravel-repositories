@@ -86,7 +86,7 @@ abstract class Repository
     /**
      * {@inheritdoc}
      */
-    public function firstOrFail($columns)
+    public function firstOrFail($columns = ['*'])
     {
         return $this->newQuery()->firstOrFail($columns);
     }
