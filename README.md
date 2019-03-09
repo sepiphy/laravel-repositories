@@ -7,27 +7,10 @@
 
 ## Installation
 
-Install the `sepiphy/laravel-repositories` package via Composer:
+Install the `sepiphy/laravel-repositories` package via Composer.
 
 ```bash
 composer require sepiphy/laravel-repositories
-```
-
-Then, you have to add the `Sepiphy\Laravel\Repositories\RepositoryServiceProvider` class to the `config/app.php` configuration file.
-
-```php
-return [
-
-    'providers' => [
-
-        /*
-         * Package Service Providers...
-         */
-        Sepiphy\Laravel\Repositories\RepositoryServiceProvider::class,
-
-    ],
-
-];
 ```
 
 ## Usage
