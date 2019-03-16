@@ -1,5 +1,7 @@
 
-# The Sepiphy Laravel Repositories package
+## About
+
+The Sepiphy Laravel Repositories package.
 
 ## Requirements
 
