@@ -106,7 +106,7 @@ $repository->paginate($perPage = null, $columns = ['*'], $pageName = 'page', $pa
 
 ## Contributing
 
-Please visit [sepiphy/laravel-extensions](../../README.md) for more details!
+Please visit [sepiphy/laraveltools](../../README.md) for more details!
 
 ## License
 
