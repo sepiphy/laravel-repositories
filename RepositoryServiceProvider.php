@@ -12,7 +12,6 @@
 namespace Sepiphy\Laravel\Repositories;
 
 use Illuminate\Support\ServiceProvider;
-use Sepiphy\Laravel\Repositories\Repository;
 
 class RepositoryServiceProvider extends ServiceProvider
 {

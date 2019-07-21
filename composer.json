@@ -1,6 +1,6 @@
 {
     "name": "sepiphy/laravel-repositories",
-    "description": "The Sepiphy Laravel Repositories package.",
+    "description": "The sepiphy/laravel-repositories package",
     "keywords": [
         "sepiphy", "laravel", "laravel-repositories", "repositories"
     ],
@@ -14,9 +14,7 @@
     "authors": [
         {
             "name": "Quynh Xuan Nguyen",
-            "email": "seriquynh@gmail.com",
-            "homepage": "https://seriquynh.com",
-            "role": "Software Developer"
+            "email": "seriquynh@gmail.com"
         }
     ],
     "require": {
