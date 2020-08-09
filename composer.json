@@ -21,7 +21,7 @@
         "php": "^7.2.0",
         "illuminate/support": "^5.8 | ^6.0 | ^7.0",
         "illuminate/database": "^5.8 | ^6.0 | ^7.0",
-        "sepiphy/laravel-support": "^1.2"
+        "sepiphy/laravel-support": "dev-master"
     },
     "autoload": {
         "psr-4": {
